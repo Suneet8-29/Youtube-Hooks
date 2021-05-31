@@ -6,7 +6,7 @@ const SearchBar = ({onSubmit}) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         onSubmit(searchParameter);
-    }
+    } 
 
     const onInputChange = (event) => {
           

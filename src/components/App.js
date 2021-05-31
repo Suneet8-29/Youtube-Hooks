@@ -13,6 +13,10 @@ const App = () => {
         setSelectedVideo(searchArray[0]);
     }, [searchArray])
 
+    const getSelectedVideo = (data) => {
+        setSelectedVideo(data)
+    }
+
     return (
         <div className='ui container'>
             <SearchBar onSubmit={getSearchParameter}></SearchBar>
@@ -22,7 +26,7 @@ const App = () => {
                     <VideoDetail video={selectedVideo} ></VideoDetail>
                 </div>
                 <div className='six wide column'>
-                    <VideoList getSelectedVideo={(data)=>setSelectedVideo(data)} videoArray={searchArray}></VideoList>
+                    <VideoList getSelectedVideo={getSelectedVideo} videoArray={searchArray}></VideoList>
                 </div> 
                 </div>    
             </div>
