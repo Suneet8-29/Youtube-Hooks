@@ -3,6 +3,7 @@ import SearchBar from './SearchBar'
 import VideoList from './VideoList'
 import VideoDetail from './VideoDetail'
 import useVideo from '../hooks/useVideos'
+import Counter from './counter'
  
 const App = () => {
      const [selectedVideo, setSelectedVideo] = useState(null);
@@ -20,6 +21,7 @@ const App = () => {
 
     return (
         <div className='ui container'>
+            <Counter></Counter>
             <SearchBar onSubmit={getSearchParameter}></SearchBar>
             <div className='ui grid'>
                 <div className='ui row'>
