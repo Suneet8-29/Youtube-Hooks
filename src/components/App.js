@@ -13,6 +13,7 @@ const App = () => {
         setSelectedVideo(searchArray[0]);
     }, [searchArray])
 
+    //added by feature selectVideo
     const selectVideo = (data) => {
         setSelectedVideo(data)
     }
